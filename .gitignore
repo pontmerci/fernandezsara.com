@@ -3,5 +3,5 @@
 /.tmp
 /.sass-cache
 /bower_components
-envia_*.php
-class.phpmailer.php
+/src/envia_*.php
+/src/class*.php
