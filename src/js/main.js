@@ -58,7 +58,7 @@ angular.module('saraApp', ['ngDialog'])
     // });
 
   })
-  .controller('shopCtl', function($log, $scope, $http, ngDialog) {
+  .controller('shopCtl', function($log, $scope, $http, ngDialog, $sce) {
     $log.log("shopCtl");
     $scope.ready=false;
     $scope.articulos=[];
@@ -71,6 +71,7 @@ angular.module('saraApp', ['ngDialog'])
     $scope.open = function (art) {
         $log.log(art);
         $scope.sel = art;
+        $scope.desc = $sce.trustAsHtml(art.desc_larga);
 
     };
 

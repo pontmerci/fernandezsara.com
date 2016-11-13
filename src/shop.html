@@ -25,34 +25,9 @@
                 <ul class="list-group row" ng-if="ready">
                     <li ng-repeat="art in articulos" class="list-group-item col-md-4">
                         <a href="#" class="hvr-grow-rotate" data-toggle="modal" data-target="#shop-det" ng-click="open(art)">
-                            <img src="{{art.links[0].contenido}}" class="img-responsive" alt="{{art.titulo}}">
+                            <img src="{{art.link_img1}}" class="img-responsive" alt="{{art.desc_corta}}">
                         </a>
                     </li>
-                    <!-- <li class="list-group-item col-md-4">
-                        <a href="#" class="hvr-grow-rotate" data-toggle="modal" data-target="#shop-det">
-                            <img src="img/articulos/2.jpg" class="img-responsive" alt="DNG_IMG_4830">
-                        </a>
-                    </li>
-                    <li class="list-group-item col-md-4">
-                        <a href="#" class="hvr-grow-rotate" data-toggle="modal" data-target="#shop-det">
-                            <img src="img/articulos/3.jpg" class="img-responsive" alt="DNG_IMG_4830">
-                        </a>
-                    </li>
-                    <li class="list-group-item col-md-4">
-                        <a href="#" class="hvr-grow-rotate" data-toggle="modal" data-target="#shop-det">
-                            <img src="img/articulos/5.jpg" class="img-responsive" alt="DNG_IMG_4830">
-                        </a>
-                    </li>
-                    <li class="list-group-item col-md-4">
-                        <a href="#" class="hvr-grow-rotate" data-toggle="modal" data-target="#shop-det">
-                            <img src="img/articulos/6.jpg" class="img-responsive" alt="DNG_IMG_4830">
-                        </a>
-                    </li> -->
-                    <!-- <li class="list-group-item col-xs-3">
-                        <a href="#" class="hvr-grow-rotate" data-toggle="modal" data-target="#shop-det">
-                            <img src="img/articulos/15.jpg" class="img-responsive" alt="DNG_IMG_4830">
-                        </a>
-                    </li> -->
 
                 </ul>
               </div>
@@ -65,31 +40,31 @@
       </div>
 
       <div class="modal fade" tabindex="-1" role="dialog" style="z-index: 99999;" id="shop-det">
-          <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-dialog modal-md" role="document">
               <div class="modal-content">
                   <div class="modal-body">
                       <div class="row">
-                          <div class="col-xs-8 col-xs-offset-2">
+                          <div class="col-xs-12">
                               <ul class="list-group row">
-                                  <li class="list-group-item col-xs-4 zoom" ng-repeat="img in sel.links">
-                                      <img src="{{img.contenido}}" class="img-responsive " alt="{{img.titulo}}">
+                                  <li ng-show ="sel.link_img1" class="list-group-item col-xs-4 zoom">
+                                      <img src="{{sel.link_img1}}" class="img-responsive " alt="{{sel.link_img3}}">
                                   </li>
-                                  <!-- <li class="list-group-item col-xs-4 zoom">
-                                      <img src="img/articulos/9.jpg" class="img-responsive " alt="DNG_IMG_4830">
+                                  <li ng-show ="sel.link_img2" class="list-group-item col-xs-4 zoom">
+                                      <img src="{{sel.link_img2}}" class="img-responsive " alt="{{sel.link_img3}}">
                                   </li>
-                                  <li class="list-group-item col-xs-4 zoom">
-                                      <img src="img/articulos/10.jpg" class="img-responsive " alt="DNG_IMG_4830">
-                                  </li> -->
+                                  <li ng-show ="sel.link_img3" class="list-group-item col-xs-4 zoom">
+                                      <img src="{{sel.link_img3}}" class="img-responsive " alt="{{sel.link_img3}}">
+                                  </li>
                               </ul>
                           </div>
                       </div>
 
                       <div class="row">
                           <div class="col-xs-6">
-                              <h2>{{ sel.titulo }}</h2>
-                              <h4>Descripcion:</h4>
-                              <p>
-                                {{ sel.contenido }}
+                              <h2>{{ sel.desc_corta }}</h2>
+                              <h4>{{ sel.subtitulo }}</h4>
+                              <p style="font-weight: bolder;" ng-bind-html="desc">
+
                               </p>
                               <br>
                               <div class="botones">
@@ -102,16 +77,16 @@
                               <h4>Envianos tu consulta:</h4>
                               <form>
                                   <div class="form-group">
-                                      <input type="text" class="form-control" ng-model="contacto.nombre" placeholder="De">
+                                      <input type="text" class="form-control" ng-model="contacto.nombre" placeholder="Tu nombre">
                                   </div>
                                   <div class="form-group">
-                                      <input type="email" class="form-control" ng-model="contacto.correo" placeholder="Email">
+                                      <input type="email" class="form-control" ng-model="contacto.correo" placeholder="Tu email">
                                   </div>
                                   <div class="form-group">
-                                      <input type="text" class="form-control" ng-model="contacto.asunto" placeholder="Asunto">
+                                      <input type="text" class="form-control" ng-model="contacto.asunto" placeholder="El asunto">
                                   </div>
                                   <div class="form-group">
-                                      <textarea class="form-control" rows="3" ng-model="contacto.consulta" placeholder="Comentarios"></textarea>
+                                      <textarea class="form-control" rows="3" ng-model="contacto.consulta" placeholder="Preguntas o comentarios"></textarea>
                                   </div>
                                   <div class="botones">
                                       <button type="button" ng-click="envio()" class="btn btn-default enviar pila-derecha hvr-grow-rotate"></button>

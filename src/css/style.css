@@ -1,6 +1,7 @@
 /* This only works with JavaScript,
 if it's not present, don't show loader */
-
+/*@import url('https://fonts.googleapis.com/css?family=Indie+Flower');*/
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&subset=latin-ext');
 .no-js #loader {
     display: none;
 }
@@ -26,7 +27,9 @@ html {
     -moz-font-smoothing: antialiased;
     font-smooth: antialiased;
     -webkit-text-size-adjust: none;
-    height: 100%
+    height: 100%;
+    /*font-family: 'Indie Flower', cursive;*/
+    font-family: 'Shadows Into Light Two', cursive;
 }
 body {
     -webkit-animation: reset, fade-in 2s 1 ease;
@@ -36,6 +39,8 @@ body {
     cursor: url(../img/cursor.png), url(../img/cursor.cur), pointer;
     background-color: #B4AFAB;
     overflow-x: hidden;
+    /*font-family: 'Indie Flower', cursive;*/
+    font-family: 'Shadows Into Light Two', cursive;
 }
 a {
     text-decoration: none;
@@ -289,20 +294,35 @@ width: 100%;
   background: none;
   border: none;
   margin: 5px;
+
 }
 #shop-list img {
   /*margin: 5px;*/
   width: 180px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: #555 7px 7px 7px;
+  -moz-box-shadow: #555 7px 7px 7px;
+  box-shadow: #555 7px 7px 7px;
 }
 
-#shop-det .modal-body{
+#shop-det .modal-content{
   background: url("../img/faq-fondo.jpg");
+
 }
 #shop-det li{
   /*margin: 5px;*/
   background: none;
   border: none;
 }
+#shop-det li img{
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+
+}
+
 #sara{
   position: absolute;
   bottom: 20px;
