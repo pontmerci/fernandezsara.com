@@ -56,11 +56,11 @@ header('Content-Type: application/json');
 			$mail = new PHPMailer();
 			$mail->PluginDir = "./helpmail/";
 			$mail->Mailer = "smtp";
-			$mail->Host = "mail.fernandezsara.com"; //"mail.diseenio.com.ar" ; # Editar el Host smtp
+			$mail->Host = "mail.1234.com"; //"mail.diseenio.com.ar" ; # Editar el Host smtp
 			$mail->SMTPAuth = true;
-			$mail->Username = "yo@fernandezsara.com.ar";  // $mi_mail; //"alejandro@diseenio.com.ar"; # editar el usuario
-			$mail->Password = "Muñecos2016"; // # Editar el password
-			$mail->From = "yo@fernandezsara.com.ar"; //$correo;//"contacto@penarolelortondo.com.ar"; //"alejandro@diseenio.com.ar"; //$mailFROM;
+			$mail->Username = "yo@1234.com.ar";  // $mi_mail; //"alejandro@diseenio.com.ar"; # editar el usuario
+			$mail->Password = "1234"; // # Editar el password
+			$mail->From = "yo@1234.com.ar"; //$correo;//"contacto@penarolelortondo.com.ar"; //"alejandro@diseenio.com.ar"; //$mailFROM;
 			$mail->FromName = $apellido//"www.penarolelortondo.com.ar";
 			$mail->Subject = "Consulta desde mi sitio web de: ".$apellido ;
 
