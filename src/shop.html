@@ -1,0 +1,147 @@
+@@include('./encabezado.html')
+<body style="background-color:#b1b1b1;">
+    <div class="se-pre-con"></div>
+    <div class="container-fluid" ng-controller="shopCtl">
+      <div id="framecontent">
+        <div class="menu animated slideInLeft">
+            <div class="btn-group-vertical" role="group">
+                <a href="bio.html" id="bio" class="hvr-grow-rotate"></a>
+                <a href="portfolio.html" id="portfolio" class="hvr-rotate"></a>
+                <a href="contacto.html" id="contacto" class="hvr-rotate"></a>
+                <a href="shop.html" id="shop" class="hvr-rotate"></a>
+                <a href="faqs.html" id="faqs" class="hvr-rotate"></a>
+            </div>
+        </div>
+        <!-- <div id="sara">
+          <img class="img-responsive" src="img/sara-contacto.png" alt=""/>
+        </div> -->
+
+      </div>
+      <div id="maincontent">
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-offset-2 col-md-7" align="center">
+              <a href="index.html">
+                  <img class="img-responsive" src="img/nube-faq.png" alt="Nube"/>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-offset-1 col-md-10" align="center">
+              <div id="shop-list">
+                <ul class="list-group row" ng-if="ready">
+                    <li ng-repeat="art in articulos" class="list-group-item col-md-4">
+                        <a href="#" class="hvr-grow-rotate" data-toggle="modal" data-target="#shop-det" ng-click="open(art)">
+                            <img src="{{art.links[0].contenido}}" class="img-responsive" alt="{{art.titulo}}">
+                        </a>
+                    </li>
+                    <!-- <li class="list-group-item col-md-4">
+                        <a href="#" class="hvr-grow-rotate" data-toggle="modal" data-target="#shop-det">
+                            <img src="img/articulos/2.jpg" class="img-responsive" alt="DNG_IMG_4830">
+                        </a>
+                    </li>
+                    <li class="list-group-item col-md-4">
+                        <a href="#" class="hvr-grow-rotate" data-toggle="modal" data-target="#shop-det">
+                            <img src="img/articulos/3.jpg" class="img-responsive" alt="DNG_IMG_4830">
+                        </a>
+                    </li>
+                    <li class="list-group-item col-md-4">
+                        <a href="#" class="hvr-grow-rotate" data-toggle="modal" data-target="#shop-det">
+                            <img src="img/articulos/5.jpg" class="img-responsive" alt="DNG_IMG_4830">
+                        </a>
+                    </li>
+                    <li class="list-group-item col-md-4">
+                        <a href="#" class="hvr-grow-rotate" data-toggle="modal" data-target="#shop-det">
+                            <img src="img/articulos/6.jpg" class="img-responsive" alt="DNG_IMG_4830">
+                        </a>
+                    </li> -->
+                    <!-- <li class="list-group-item col-xs-3">
+                        <a href="#" class="hvr-grow-rotate" data-toggle="modal" data-target="#shop-det">
+                            <img src="img/articulos/15.jpg" class="img-responsive" alt="DNG_IMG_4830">
+                        </a>
+                    </li> -->
+
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <div class="modal fade" tabindex="-1" role="dialog" style="z-index: 99999;" id="shop-det">
+          <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <div class="row">
+                          <div class="col-xs-8 col-xs-offset-2">
+                              <ul class="list-group row">
+                                  <li class="list-group-item col-xs-4 zoom" ng-repeat="img in sel.links">
+                                      <img src="{{img.contenido}}" class="img-responsive " alt="{{img.titulo}}">
+                                  </li>
+                                  <!-- <li class="list-group-item col-xs-4 zoom">
+                                      <img src="img/articulos/9.jpg" class="img-responsive " alt="DNG_IMG_4830">
+                                  </li>
+                                  <li class="list-group-item col-xs-4 zoom">
+                                      <img src="img/articulos/10.jpg" class="img-responsive " alt="DNG_IMG_4830">
+                                  </li> -->
+                              </ul>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-xs-6">
+                              <h2>{{ sel.titulo }}</h2>
+                              <h4>Descripcion:</h4>
+                              <p>
+                                {{ sel.contenido }}
+                              </p>
+                              <br>
+                              <div class="botones">
+                                  <h4 class="pila-izq">Compartir:</h4>
+                                  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//fernandezsara.com/shop.html" target="_blank" class="btn btn-default facebook hvr-grow-rotate"></a>
+                                  <a href="https://www.instagram.com/___sara___f/" target="_blank" class="btn btn-default instagram hvr-grow-rotate"></a>
+                              </div>
+                          </div>
+                          <div class="col-xs-6">
+                              <h4>Envianos tu consulta:</h4>
+                              <form>
+                                  <div class="form-group">
+                                      <input type="text" class="form-control" ng-model="contacto.nombre" placeholder="De">
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="email" class="form-control" ng-model="contacto.correo" placeholder="Email">
+                                  </div>
+                                  <div class="form-group">
+                                      <input type="text" class="form-control" ng-model="contacto.asunto" placeholder="Asunto">
+                                  </div>
+                                  <div class="form-group">
+                                      <textarea class="form-control" rows="3" ng-model="contacto.consulta" placeholder="Comentarios"></textarea>
+                                  </div>
+                                  <div class="botones">
+                                      <button type="button" ng-click="envio()" class="btn btn-default enviar pila-derecha hvr-grow-rotate"></button>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+              <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+
+
+
+    </div>
+
+
+
+</div>
+
+@@include('./pie.html', {"fondo": "faq-fondo.jpg"})

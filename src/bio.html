@@ -1,0 +1,66 @@
+@@include('./encabezado.html')
+    <body style="background-color:#50819e;">
+        <div class="se-pre-con"></div>
+        <div class="container-fluid" ng-controller="bioCtl">
+          <div id="framecontent">
+            <div class="menu animated slideInLeft">
+                <div class="btn-group-vertical" role="group">
+                    <a href="bio.html" id="bio" class="hvr-grow-rotate"></a>
+                    <a href="portfolio.html" id="portfolio" class="hvr-rotate"></a>
+                    <a href="contacto.html" id="contacto" class="hvr-rotate"></a>
+                    <a href="shop.html" id="shop" class="hvr-rotate"></a>
+                    <a href="faqs.html" id="faqs" class="hvr-rotate"></a>
+                </div>
+            </div>
+            <!-- <div id="sara">
+              <img class="img-responsive" src="img/sara-contacto.png" alt=""/>
+            </div> -->
+
+          </div>
+          <div id="maincontent">
+            <!-- <div class="container-fluid">
+              <div class="row" align="center">
+                <div class="col-md-12">
+                  <a href="index.html">
+                      <img class="img-responsive" src="img/nube-bio.png" alt=""/>
+                  </a>
+                </div>
+              </div>
+              <div id="textobio">
+                <img src="img/textobio-solo.png" class="img-responsive centro animated slideInRight" alt="Texto BIO" />
+              </div>
+              <div id="textobio">
+                <img src="img/sara-bio.png" class="img-responsive centro animated slideInLeft" alt="Texto BIO" />
+              </div>
+
+
+            </div> -->
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                  <a href="index.html" >
+                      <img class="img-responsive" src="img/nube-bio.png" alt="portfolio"/>
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12" align="center">
+                  <div class="texto-bio">
+                    <img src="img/textobio-solo.png" alt="bio" class="img-responsive  animated slideInRight">
+                  </div>
+                  <div id="sara-bio">
+                    <img src="img/sara-bio.png" width="300" class="img-responsive centro animated slideInLeft" alt="Texto BIO" />
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+@@include('./pie.html', {"fondo": "bio.jpg"})

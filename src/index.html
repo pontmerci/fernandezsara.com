@@ -1,0 +1,78 @@
+@@include('./encabezado.html')
+<body>
+
+    <div class="container-fluid" ng-controller="homeCtl">
+
+      <div id="framecontent">
+        <div class="menu animated slideInLeft">
+            <div class="btn-group-vertical" role="group">
+                <a href="bio.html" id="bio" class="hvr-grow-rotate"></a>
+                <a href="portfolio.html" id="portfolio" class="hvr-rotate"></a>
+                <a href="contacto.html" id="contacto" class="hvr-rotate"></a>
+                <a href="shop.html" id="shop" class="hvr-rotate"></a>
+                <a href="faqs.html" id="faqs" class="hvr-rotate"></a>
+            </div>
+        </div>
+        <!-- <div id="sara">
+          <img class="img-responsive" src="img/sara-contacto.png" alt=""/>
+        </div> -->
+
+      </div>
+      <div id="maincontent">
+        <div class="container-fluid">
+          <div class="row" align="center">
+            <div class="col-md-offset-2 col-md-7">
+              <a href="index.html">
+                  <img class="img-responsive" src="img/nube.png" alt=""/>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div id="carousel-example-generic" class="carousel slide animated slideInLeft" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+              <div class="item active" align="center">
+                  <img class="img-responsive" src="img/slide1.png" alt="UNO">
+
+              </div>
+              <div class="item" align="center">
+                  <img class="img-responsive" src="img/slide2.png" alt="DOS">
+
+              </div>
+              <div class="item" align="center">
+                  <img class="img-responsive" src="img/slide3.png" alt="TRES">
+
+              </div>
+              <div class="item" align="center">
+                  <img class="img-responsive" src="img/slide4.png" alt="CUATRO">
+
+              </div>
+              <div class="item" align="center">
+                  <img class="img-responsive" src="img/slide5.png" alt="CINCO">
+
+              </div>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Ant</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Sig</span>
+          </a>
+      </div>
+    </div>
+@@include('./pie.html', {"fondo": "basehome2.jpg"})

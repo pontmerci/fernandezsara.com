@@ -1,0 +1,75 @@
+@@include('./encabezado.html')
+    <body style="background-color:#988b7c;">
+        <div class="se-pre-con"></div>
+        <div class="container-fluid" ng-controller="contactoCtl">
+          <div id="framecontent">
+            <div class="menu animated slideInLeft">
+                <div class="btn-group-vertical" role="group">
+                    <a href="bio.html" id="bio" class="hvr-grow-rotate"></a>
+                    <a href="portfolio.html" id="portfolio" class="hvr-rotate"></a>
+                    <a href="contacto.html" id="contacto" class="hvr-rotate"></a>
+                    <a href="shop.html" id="shop" class="hvr-rotate"></a>
+                    <a href="faqs.html" id="faqs" class="hvr-rotate"></a>
+                </div>
+            </div>
+            <!-- <div id="sara">
+              <img class="img-responsive" src="img/sara-contacto.png" alt=""/>
+            </div> -->
+
+          </div>
+          <div id="maincontent">
+            <div class="container-fluid">
+              <div class="row" >
+                <div class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
+                  <div class="animated shake">
+                      <a href="index.html">
+                          <img class="img-responsive" src="img/nube-contacto.png" alt=""/>
+                      </a>
+                      <div class="nube-contacto">
+                        <img class="img-responsive" src="img/contacto.png" alt=""/>
+                      </div>
+                      <div class="sara-contacto animated pulse infinite">
+                        <img class="img-responsive" src="img/sara-contacto.png" alt=""/>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-5 col-md-offset-3 col-xs-6 col-xs-offset-2">
+                  <div id="formulario" class="animated slideInRight">
+
+                      <form>
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="De" ng-model="contacto.nombre">
+                          </div>
+                          <div class="form-group">
+                              <input type="email" class="form-control" placeholder="Email" ng-model="contacto.correo">
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Asunto" ng-model="contacto.asunto">
+                          </div>
+                          <div class="form-group">
+                              <textarea class="form-control" rows="3" placeholder="Comentarios" ng-model="contacto.consulta"></textarea>
+                          </div>
+                          <div class="botones">
+                            <a href="https://www.facebook.com/sara.f.fernandez.96" target="_blank" class="btn btn-default facebook pila-derecha hvr-grow-rotate"></a>
+                            <a href="https://www.instagram.com/___sara___f/" target="_blank" class="btn btn-default instagram pila-derecha hvr-grow-rotate"></a>
+                            <button type="button" ng-click="envio()" class="btn btn-default enviar pila-derecha hvr-grow-rotate"></button>
+                          </div>
+
+                      </form>
+
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+@@include('./pie.html', {"fondo": "contacto-fondo.jpg"})

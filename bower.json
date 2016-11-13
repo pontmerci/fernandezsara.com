@@ -1,0 +1,31 @@
+{
+  "name": "fernandezsara.com",
+  "description": "sara",
+  "main": "index.js",
+  "authors": [
+    "diseenio.com"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "animate.css": "animate-css#^3.5.1",
+    "hover": "Hover#^2.0.2",
+    "jquery-backstretch": "backstretch#^2.0.4",
+    "lightslider": "^1.1.5",
+    "scrollreveal": "^3.3.1",
+    "jquery-zoom": "^1.7.15",
+    "angular": "^1.5.8",
+    "ng-dialog": "^0.6.4"
+  },
+  "devDependencies": {
+    "angular-post-fix": "^0.1.0"
+  }
+}

@@ -1,0 +1,111 @@
+@@include('./encabezado.html')
+<body style="background-color:#b1b1b1;">
+    <div class="se-pre-con"></div>
+    <div class="container-fluid" ng-controller="portfolioCtl">
+      <div id="framecontent">
+        <div class="menu animated slideInLeft">
+            <div class="btn-group-vertical" role="group">
+                <a href="bio.html" id="bio" class="hvr-grow-rotate"></a>
+                <a href="portfolio.html" id="portfolio" class="hvr-rotate"></a>
+                <a href="contacto.html" id="contacto" class="hvr-rotate"></a>
+                <a href="shop.html" id="shop" class="hvr-rotate"></a>
+                <a href="faqs.html" id="faqs" class="hvr-rotate"></a>
+            </div>
+        </div>
+        <!-- <div id="sara">
+          <img class="img-responsive" src="img/sara-contacto.png" alt=""/>
+        </div> -->
+
+      </div>
+      <div id="maincontent">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4 col-md-offset-3">
+              <a href="index.html" >
+                  <img class="img-responsive" src="img/nube-faq.png" alt="portfolio"/>
+              </a>
+            </div>
+          </div>
+
+          <div id="portfolio-list" class="animated slideInRight">
+              <div class="row">
+                  <div class="col-md-4 col-md-offset-3">
+                      <ul class="list-group" ng-if="ready">
+                          <li class="list-group-item" ng-repeat="p in portfolio">
+                              <a href="portfolio-det.html#/portfolio?id={{p._id}}" class="hvr-grow-rotate"   >
+                                  <img src="{{p.contenido}}" alt="p.titulo" class="img-responsive">
+                              </a>
+                          </li>
+                          <!-- <li class="list-group-item" ng-repeat="p in portfolio">
+                              <a href="portfolio-det.html#/portfolio?id={{p._id}}" class="hvr-grow-rotate"   >
+                                  <img src="{{p.contenido}}" alt="p.titulo" class="img-responsive">
+                              </a>
+                          </li> -->
+                          <!-- <li class="list-group-item">
+                              <a href="#" class="hvr-grow-rotate" data-toggle="modal" data-target="#portfolio-det">
+                                  <img src="img/portfolio_vestuario.png" alt="" class="img-responsive">
+                              </a>
+                          </li>
+                           -->
+
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- img in ngDialogData -->
+    <!-- <script type="text/ng-template" id="firstDialogId">
+       <div class="ngdialog-message">
+
+          <div id="carousel-example-generic2" class="carousel slide" data-ride="carousel" ng-if="muestra">
+
+
+              <div class="carousel-inner">
+                  <div class="item " ng-repeat="i in lista">
+                      <img class="img-responsive" src="img/portfolio/government/government1.jpg" alt="government1">
+                  </div>
+
+              </div>
+
+
+              <a class="left carousel-control" href="#carousel-example-generic2" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic2" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+          </div>
+      </div>
+
+
+    </script> -->
+
+</div>
+
+
+<!--
+<div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
+
+
+    <div class="carousel-inner">
+        <div class="item " ng-repeat="i in lista">
+            <img class="img-responsive" src="img/portfolio/government/government1.jpg" alt="government1">
+        </div>
+
+    </div>
+
+
+    <a class="left carousel-control" href="#carousel-example-generic2" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic2" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div> -->
+
+
+@@include('./pie.html', {"fondo": "portfolioimagen2.jpg"})

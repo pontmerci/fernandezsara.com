@@ -1,0 +1,309 @@
+/* This only works with JavaScript,
+if it's not present, don't show loader */
+
+.no-js #loader {
+    display: none;
+}
+.js #loader {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url("../img/sara-contacto.png") center no-repeat rgba(0, 0, 0, 0.5);
+}
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smooth: antialiased;
+    -webkit-text-size-adjust: none;
+    height: 100%
+}
+body {
+    -webkit-animation: reset, fade-in 2s 1 ease;
+    -moz-animation: reset, fade-in 2s 1 ease;
+    outline: none;
+    height: 100%;
+    cursor: url(../img/cursor.png), url(../img/cursor.cur), pointer;
+    background-color: #B4AFAB;
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+    transition: All 0.5s ease;
+    -webkit-transition: All 0.5s ease;
+    -moz-transition: All 0.5s ease;
+    -o-transition: All 0.5s ease;
+    cursor: url(../img/cursor.png), url(../img/cursor.cur), pointer;
+}
+span {
+    cursor: url(../img/cursor.png), url(../img/cursor.cur), pointer;
+}
+[role="button"] {
+    cursor: url(../img/cursor.png), url(../img/cursor.cur), pointer;
+}
+
+#framecontent{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+width: 325px; /*Width of frame div*/
+height: 100%;
+overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+/*background: url('../img/bg-menu.png') left top no-repeat;*/
+
+
+}
+
+#maincontent{
+position: fixed;
+top: 0;
+left: 325px; /*Set left value to WidthOfFrameDiv*/
+right: 0;
+bottom: 0;
+overflow-y:auto;
+overflow-x:hidden;
+}
+
+* html body{ /*IE6 hack*/
+padding: 0 0 0 200px; /*Set value to (0 0 0 WidthOfFrameDiv)*/
+}
+
+* html #maincontent{ /*IE6 hack*/
+height: 100%;
+width: 100%;
+}
+
+
+.btn-default:hover {
+    background-color: transparent;
+    border: none;
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+.carousel-indicators {
+    left: 90%;
+}
+.menu {
+    position: absolute;
+    z-index: 99999;
+    top: 100px;
+    left: -10px;
+}
+.menu #bio {
+    background: url("../img/bio.png") left;
+    background-repeat: no-repeat;
+    border: none;
+    width: 350px;
+    height: 78px;
+}
+.menu #portfolio {
+    background: url("../img/portfolio.png") left;
+    background-repeat: no-repeat;
+    border: none;
+    width: 350px;
+    height: 88px;
+}
+.menu #faqs {
+    background: url("../img/faqs.png") left;
+    background-repeat: no-repeat;
+    border: none;
+    width: 350px;
+    height: 56px;
+}
+.menu #contacto {
+    background: url("../img/contacto.png") left;
+    background-repeat: no-repeat;
+    border: none;
+    width: 350px;
+    height: 68px;
+    margin-top: -30px;
+}
+.menu #shop {
+    background: url("../img/shop.png") left;
+    background-repeat: no-repeat;
+    border: none;
+    width: 350px;
+    height: 68px;
+}
+.centro {
+    margin: 0 auto;
+}
+#sara-bio {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.texto-bio {
+  margin-top: -160px;
+}
+
+#faqs-list {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#faqs-list .panel-default> .panel-heading {
+    background: none;
+    border: none;
+}
+#faqs-list .panel-default {
+    border: none;
+}
+#faqs-list .panel {
+    background: none;
+}
+#faqs-list .panel-default> .panel-heading+ .panel-collapse> .panel-body {
+    border: none;
+}
+#faqs-list .panel-group .panel-heading+ .panel-collapse> .panel-body, #faqs-list .panel-group .panel-heading+ .panel-collapse> .list-group {
+    border: none;
+}
+#faqs-list .panel-title {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#carousel-example-generic {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#portfolio-list {
+    /*position: absolute;
+    bottom: 0;
+    width: 100%;*/
+}
+#portfolio-list .list-group {}
+#portfolio-list .list-group-item {
+    padding: 3px 0px;
+    background: none;
+    border: none;
+}
+.carousel-control.right {
+    background: none;
+}
+.carousel-control.left {
+    background: none;
+}
+
+#portfolio-det-lista .item{
+  margin-bottom: 20px;
+  -webkit-box-shadow: 1px 1px 16px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 1px 16px 0px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 16px 0px rgba(0,0,0,0.75);
+}
+
+#formulario {
+    /*position: absolute;
+    bottom: 10px;
+    width: 100%;*/
+    margin-bottom: 50px;
+    margin-top: -50px;
+}
+.nube-contacto {
+    position: absolute;
+    top: 190px;
+    left: 360px;
+    z-index: 999;
+    -ms-transform: rotate(30deg);
+    /* IE 9 */
+    -webkit-transform: rotate(30deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(30deg);
+}
+.sara-contacto {
+    position: absolute;
+    top: 100px;
+    left: 390px;
+    z-index: 998;
+}
+#formulario .form-control {
+    background: url("../img/fondo-input.png") top left;
+    border: none;
+    color: #FFF;
+    padding-left: 30px;
+    font-size: 14px;
+}
+#formulario .form-control:focus {
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(124, 98, 94, .8);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(124, 98, 94, .8);
+}
+#formulario .botones {
+    margin-right: -110px;
+}
+.pila-derecha{
+    float: right;
+}
+.pila-izq {
+  float: left;
+}
+.enviar {
+    background: url("../img/enviar.png") top center;
+    width: 80px;
+    height: 32px;
+    border: none;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(124, 98, 94, .8);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(124, 98, 94, .8);
+}
+.facebook {
+    background: url("../img/face.png") top center;
+    width: 34px;
+    height: 40px;
+    border: none;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+.instagram {
+    background: url("../img/instagram.png") top center;
+    width: 34px;
+    height: 40px;
+    border: none;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+.jumbotron {
+    margin: 80px 20px;
+    background-color: #000;
+    padding: 10px;
+}
+
+
+#shop-list li {
+  /*margin: 5px;*/
+  width: 200px;
+  background: none;
+  border: none;
+  margin: 5px;
+}
+#shop-list img {
+  /*margin: 5px;*/
+  width: 180px;
+}
+
+#shop-det .modal-body{
+  background: url("../img/faq-fondo.jpg");
+}
+#shop-det li{
+  /*margin: 5px;*/
+  background: none;
+  border: none;
+}
+#sara{
+  position: absolute;
+  bottom: 20px;
+}

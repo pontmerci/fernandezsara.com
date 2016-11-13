@@ -1,0 +1,64 @@
+@@include('./encabezado.html')
+    <body style="background-color:#b1b1b1;">
+        <div class="se-pre-con"></div>
+        <div class="container-fluid" ng-controller="portfolioDetCtl">
+          <div id="framecontent">
+            <div class="menu animated slideInLeft">
+                <div class="btn-group-vertical" role="group">
+                    <a href="bio.html" id="bio" class="hvr-grow-rotate"></a>
+                    <a href="portfolio.html" id="portfolio" class="hvr-rotate"></a>
+                    <a href="contacto.html" id="contacto" class="hvr-rotate"></a>
+                    <a href="shop.html" id="shop" class="hvr-rotate"></a>
+                    <a href="faqs.html" id="faqs" class="hvr-rotate"></a>
+                </div>
+            </div>
+            <div id="sara">
+            <!--   <img class="img-responsive" src="img/sara-contacto.png" alt=""/>  -->
+            <a href="#" onclick="window.history.back()" class="hvr-rotate">
+              <img class="img-responsive" src="img/volver.png" alt=""/>
+            </a>
+
+            </div>
+
+          </div>
+          <div id="maincontent">
+
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-offset-2 col-md-7" align="center">
+                  <a href="index.html">
+                      <img class="img-responsive" src="img/nube-faq.png" alt="Nube"/>
+                  </a>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-offset-2 col-md-7" align="center">
+                  <div id="portfolio-det-lista" ng-if="ready">
+                    <div class="item " ng-repeat=" i in lista">
+                        <img class="img-responsive" src="{{i.contenido}}" alt="{{i.titulo}}">
+                    </div>
+                    <!-- <div class="item " ng-repeat=" i in lista">
+                      <img class="img-responsive" src="img/portfolio/government/government1.jpg" alt="government1">
+                    </div>
+                    <div class="item " >
+                      <img class="img-responsive" src="img/portfolio/government/government1.jpg" alt="government1">
+                    </div>
+                    <div class="item " >
+                      <img class="img-responsive" src="img/portfolio/government/government1.jpg" alt="government1">
+                    </div>
+                    <div class="item " >
+                      <img class="img-responsive" src="img/portfolio/government/government1.jpg" alt="government1">
+                    </div> -->
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+@@include('./pie.html', {"fondo": "faq-fondo.jpg"})
