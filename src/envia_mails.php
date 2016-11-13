@@ -63,13 +63,13 @@
 			$mail->SMTPAuth   = true;                  // enable SMTP authentication
 			$mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
 
-			$mail->Username = "mail.fernandezsara.com"; // Correo completo a utilizar
-			$mail->Password = "Munecos2016"; // Contraseńa
+			$mail->Username = "mail.1234.com"; // Correo completo a utilizar
+			$mail->Password = "1234"; // Contraseńa
 			//$mail->Port = 465; // Puerto a utilizar
 			$mail->Port = 587;
 
-			$mail->From = "yo@fernandezsara.com";
-			$mail->FromName = "Consulta desde Fernandezsara.com";
+			$mail->From = "yo@1234.com";
+			$mail->FromName = "Consulta desde 1234.com";
 			$mail->Subject = "Consulta de:".$nombre;
 			//$mail->AddAddress($_POST['destino']);
 			$mail->AddAddress("yo@fernandezsara.com");
