@@ -62,7 +62,7 @@ angular.module('saraApp', ['ngDialog'])
     $log.log("shopCtl");
     $scope.ready=false;
     $scope.articulos=[];
-    $http.get('http://fernandezsara.com/slim/public/api.php/articulos').then (function (data) {
+    $http.get('http://fernandezsara.com/slim2/public/api.php/adj_articulos').then (function (data) {
       $log.log(data.data);
       $scope.articulos=data.data;
       $scope.ready=true;
