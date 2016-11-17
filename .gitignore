@@ -1,7 +1,8 @@
 /node_modules
-/dist
+/public_html
 /.tmp
 /.sass-cache
 /bower_components
 /src/envia_*.php
 /src/class*.php
+.ftpconfig

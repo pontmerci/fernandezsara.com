@@ -10,7 +10,7 @@ const imagemin = require('gulp-imagemin');
 gulp.task('img', () =>
     gulp.src('./src/img/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('./dist/img'))
+    .pipe(gulp.dest('./public_html/img'))
 );
 
 gulp.task('vendorJS', function() {
@@ -19,7 +19,7 @@ gulp.task('vendorJS', function() {
         //.pipe(plugins.jshint())
         //.pipe(plugins.jshint.reporter('default'))
         //.pipe(plugins.concat('lib.js'))
-        .pipe(gulp.dest('./dist/bower_components'));
+        .pipe(gulp.dest('./public_html/bower_components'));
 });
 gulp.task('vendorCSS', function() {
     //concatenate vendor CSS files
@@ -27,14 +27,14 @@ gulp.task('vendorCSS', function() {
             './bower_components/**/*.css'
         ])
         //.pipe(plugins.concat('lib.css'))
-        .pipe(gulp.dest('./dist/bower_components'));
+        .pipe(gulp.dest('./public_html/bower_components'));
 });
 gulp.task('js', function() {
     gulp.src('./src/**/*.js')
         .pipe(plugins.jshint())
         .pipe(plugins.jshint.reporter('default'))
         .pipe(plugins.concat('main.js'))
-        .pipe(gulp.dest('./dist/js'));
+        .pipe(gulp.dest('./public_html/js'));
 });
 gulp.task('css', function() {
     gulp.src('./src/**/*.css')
@@ -44,11 +44,11 @@ gulp.task('css', function() {
         })]))
         .pipe(plugins.sourcemaps.write('.'))
         .pipe(plugins.concat('style.css'))
-        .pipe(gulp.dest('./dist/css'));
+        .pipe(gulp.dest('./public_html/css'));
 });
 gulp.task('fonts', function() {
     gulp.src('./bower_components/**/fonts/*.*')
-        .pipe(gulp.dest('./dist/bower_components'));
+        .pipe(gulp.dest('./public_html/bower_components'));
 });
 gulp.task('copy', function() {
     gulp.src(['./src/*.html', './src/*.php'])
@@ -59,7 +59,7 @@ gulp.task('copy', function() {
         .pipe(plugins.htmlmin({
             collapseWhitespace: true
         }))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./public_html'));
 });
 gulp.task('watch', function() {
     gulp.watch(['./src/**/*.js', '!./src/**/*test.js'], ['js']);
@@ -70,7 +70,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['copy', 'css', 'js', 'vendorCSS', 'vendorJS', 'img', 'fonts', 'watch'], function() {
-    gulp.src('dist')
+    gulp.src('public_html')
         .pipe(plugins.webserver({
             port: 9000,
             livereload: true

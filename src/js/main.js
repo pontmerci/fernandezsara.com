@@ -26,8 +26,8 @@ angular.module('saraApp', ['ngDialog'])
     $log.log("portfolioCtl");
     $scope.ready=false;
     $scope.portfolio=[];
-    $http.get('http://fernandezsara.com/slim/public/api.php/base/entrada/portfolio').then (function (data) {
-      //$log.log(data.data);
+    $http.get('http://fernandezsara.com/slim2/public/api.php/adj_categorias').then (function (data) {
+      $log.log(data.data);
       $scope.portfolio=data.data;
       $scope.ready=true;
     });
@@ -41,10 +41,10 @@ angular.module('saraApp', ['ngDialog'])
     $scope.ready=false;
     $scope.portfolio=[];
     $scope.lista=[];
-    $http.get('http://fernandezsara.com/slim/public/api.php/base/entrada/portfolio/'+id).then (function (data) {
-      $log.log(data.data.links);
+    $http.get('http://fernandezsara.com/slim2/public/api.php/adj_galeria/filtro/categoria,=,'+id).then (function (data) {
+      $log.log(data.data);
       $scope.portfolio=data.data;
-      $scope.lista=data.data.links;
+      $scope.lista=data.data;
       $scope.ready=true;
     });
 
