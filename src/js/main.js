@@ -95,7 +95,7 @@ angular.module('saraApp', ['ngDialog'])
   })
   .controller('contactoCtl', function($log, $scope, $http) {
     $log.log("contactoCtl");
-    $scope.contacto = { nombre: "", correo: "", asunto:"", consulta:"" };
+    $scope.contacto = { nombre: "De", correo: "Email", asunto:"Asunto", consulta:"Comentarios" };
     //http://www.fernandezsara.com/web/envia_mails.php
     $scope.envio = function () {
         $(".se-pre-con").fadeIn();
@@ -106,7 +106,7 @@ angular.module('saraApp', ['ngDialog'])
       (function($) {
       jQuery.post('envia_mails.php', $scope.contacto).success(function(response) {
         console.log(response);
-        $scope.contacto = { nombre: "", correo: "", asunto:"", consulta:"" };
+        $scope.contacto = { nombre: "De", correo: "Email", asunto:"Asunto", consulta:"Comentarios" };
         $(".se-pre-con").fadeOut();
         alert(response);
       });

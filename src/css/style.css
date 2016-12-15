@@ -207,6 +207,8 @@ width: 100%;
 
 #portfolio-det-lista .item{
   margin-bottom: 20px;
+}
+#portfolio-det-lista .item img{
   -webkit-box-shadow: 1px 1px 16px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 1px 1px 16px 0px rgba(0,0,0,0.75);
   box-shadow: 1px 1px 16px 0px rgba(0,0,0,0.75);
@@ -322,7 +324,6 @@ width: 100%;
   border-radius: 20px;
 
 }
-
 #sara{
   position: absolute;
   bottom: 20px;
