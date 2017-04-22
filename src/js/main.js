@@ -1,7 +1,7 @@
 console.log("Hola soy Sara Fernandez!");
 $(window).load(function() {
     // Animate loader off screen
-    $(".se-pre-con").fadeOut("slow");
+    //$(".se-pre-con").fadeOut("slow");
 
 });
 $(document).ready(function() {
@@ -14,11 +14,13 @@ $(document).ready(function() {
 angular.module('saraApp', ['ngDialog'])
   .controller('homeCtl', function($log, $scope) {
     $log.log("homeCtl");
+      $(".se-pre-con").fadeOut("slow");
 
 
   })
   .controller('bioCtl', function($log, $scope) {
     $log.log("bioCtl");
+      $(".se-pre-con").fadeOut("slow");
 
 
   })
@@ -26,10 +28,12 @@ angular.module('saraApp', ['ngDialog'])
     $log.log("portfolioCtl");
     $scope.ready=false;
     $scope.portfolio=[];
+      $(".se-pre-con").fadeIn("slow");
     $http.get('http://fernandezsara.com/slim2/public/api.php/adj_categorias').then (function (data) {
       $log.log(data.data);
       $scope.portfolio=data.data;
       $scope.ready=true;
+        $(".se-pre-con").fadeOut("slow");
     });
 
 
@@ -38,20 +42,24 @@ angular.module('saraApp', ['ngDialog'])
     $log.log("portfolioDetCtl");
     // $log.log($location.search().id);
     var id = $location.search().id;
+    $scope.cat = id;
     $scope.ready=false;
     $scope.portfolio=[];
     $scope.lista=[];
+      $(".se-pre-con").fadeIn("slow");
     $http.get('http://fernandezsara.com/slim2/public/api.php/adj_galeria/filtro/categoria,=,'+id).then (function (data) {
       $log.log(data.data);
       $scope.portfolio=data.data;
       $scope.lista=data.data;
       $scope.ready=true;
+        $(".se-pre-con").fadeOut("slow");
     });
 
 
   })
   .controller('faqCtl', function($log, $scope, $http) {
     $log.log("faqCtl");
+      $(".se-pre-con").fadeOut("slow");
 
     // $http.get('https://www.bmros.com.ar/promociones/slim/api.php/cms/promociones').then (function (data) {
     //   $log.log(data);
@@ -62,10 +70,12 @@ angular.module('saraApp', ['ngDialog'])
     $log.log("shopCtl");
     $scope.ready=false;
     $scope.articulos=[];
+      $(".se-pre-con").fadeIn("slow");
     $http.get('http://fernandezsara.com/slim2/public/api.php/adj_articulos').then (function (data) {
       $log.log(data.data);
       $scope.articulos=data.data;
       $scope.ready=true;
+        $(".se-pre-con").fadeOut("slow");
 
     });
     $scope.open = function (art) {
@@ -95,6 +105,7 @@ angular.module('saraApp', ['ngDialog'])
   })
   .controller('contactoCtl', function($log, $scope, $http) {
     $log.log("contactoCtl");
+      $(".se-pre-con").fadeOut("slow");
     $scope.contacto = { nombre: "De", correo: "Email", asunto:"Asunto", consulta:"Comentarios" };
     //http://www.fernandezsara.com/web/envia_mails.php
     $scope.envio = function () {
@@ -116,4 +127,30 @@ angular.module('saraApp', ['ngDialog'])
 
 
   })
+    .controller('mobileCtl', function($log, $scope, $http, $location) {
+        $log.log("mobileCtl");
+
+        $scope.ready=false;
+        $scope.portfolio=[];
+
+        $http.get('http://fernandezsara.com/slim2/public/api.php/adj_categorias').then (function (data) {
+            $log.log(data.data);
+            $scope.portfolio=data.data;
+            $scope.ready=true;
+            $(".se-pre-con").fadeOut("slow");
+
+        });
+        var id = $location.search().id;
+        $scope.cat = id;
+        $scope.lista=[];
+        $(".se-pre-con").fadeIn("slow");
+        $http.get('http://fernandezsara.com/slim2/public/api.php/adj_galeria/filtro/categoria,=,'+id).then (function (data) {
+            $log.log(data.data);
+            $scope.lista=data.data;
+            $scope.ready=true;
+            $(".se-pre-con").fadeOut("slow");
+        });
+
+
+    })
   ;

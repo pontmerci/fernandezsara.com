@@ -28,6 +28,18 @@
               <div class="row">
                 <div class="col-md-offset-2 col-md-7" align="center">
                   <div id="portfolio-det-lista" ng-if="ready">
+                    <div ng-if="cat==13" class="item " >
+                        <video class="img-responsive" controls="" autoplay="" name="video" title="video">
+                            <source src="img/silencio.mp4" type="video/mp4">
+                            <source src="img/silencio.webm" type="video/webm">
+                        </video>
+                    </div>
+                      <div ng-if="cat==14" class="item " >
+                          <video class="img-responsive" controls="" autoplay="" name="video" title="video">
+                              <source src="img/stu.mp4" type="video/mp4">
+                              <source src="img/stu.webm" type="video/webm">
+                          </video>
+                      </div>
                     <div class="item " ng-repeat=" i in lista">
                         <img class="img-responsive" src="{{i.link_img1}}" alt="{{i.desc_corta}}">
                     </div>

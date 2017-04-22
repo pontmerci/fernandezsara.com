@@ -1,0 +1,171 @@
+@@include('./encabezado.html')
+<body id="mobile">
+    <div class="container-fluid" ng-controller="mobileCtl">
+
+        <div class="enca" align="center" >
+            <div class="row">
+                <div class="col-md-12" >
+                    <img src="img/sara-contacto.png" alt="sarafernandez" class="img-responsive">
+                </div>
+
+            </div>
+        </div>
+        <div class="menu1">
+            <div class="btn-group-vertical" role="group">
+                <a href="#bio-content" id="bio" class="hvr-grow-rotate"></a>
+                <a href="#portfolio-content" id="portfolio" class="hvr-rotate"></a>
+                <a href="#contacto-content" id="contacto" class="hvr-rotate"></a>
+                <!--<a href="#shop-content" id="shop" class="hvr-rotate"></a>-->
+                <a href="#faqs-content" id="faqs" class="hvr-rotate"></a>
+            </div>
+        </div>
+        <div class="slide-mobile">
+            <div id="carousel-example-generic" class="carousel slide animated slideInLeft" data-ride="carousel">
+                <!-- Indicators
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                </ol>
+-->
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active" align="center">
+                        <img class="img-responsive" src="img/slide1.png" alt="UNO">
+
+                    </div>
+                    <div class="item" align="center">
+                        <img class="img-responsive" src="img/slide2.png" alt="DOS">
+
+                    </div>
+                    <div class="item" align="center">
+                        <img class="img-responsive" src="img/slide3.png" alt="TRES">
+
+                    </div>
+                    <div class="item" align="center">
+                        <img class="img-responsive" src="img/slide4.png" alt="CUATRO">
+
+                    </div>
+                    <div class="item" align="center">
+                        <img class="img-responsive" src="img/slide5.png" alt="CINCO">
+
+                    </div>
+
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Ant</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Sig</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="/bio-content" class="contenido">
+            <img src="img/bio.png" alt="" class="img-responsive">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="img/textobio.png" alt="bio" class="img-responsive  animated slideInRight">
+
+                </div>
+            </div>
+        </div>
+
+
+        <div id="/portfolio-content" class="contenido">
+            <img src="img/portfolio.png" alt="" class="img-responsive">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-group"  ng-if="ready">
+                        <li class="list-group-item" ng-repeat="p in portfolio">
+                            <a href="portfolio-mobile.html#/portfolio?id={{p.id_categoria}}" class="hvr-grow-rotate"   >
+                                <img src="{{p.link_img1}}" alt="{{p.desc_corta}}" class="img-responsive">
+                            </a>
+                        </li>
+                        <!-- <li class="list-group-item" ng-repeat="p in portfolio">
+                            <a href="portfolio-det.html#/portfolio?id={{p._id}}" class="hvr-grow-rotate"   >
+                                <img src="{{p.contenido}}" alt="p.titulo" class="img-responsive">
+                            </a>
+                        </li> -->
+                        <!-- <li class="list-group-item">
+                            <a href="#" class="hvr-grow-rotate" data-toggle="modal" data-target="#portfolio-det">
+                                <img src="img/portfolio_vestuario.png" alt="" class="img-responsive">
+                            </a>
+                        </li>
+                         -->
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="contenido" id="/contacto-content">
+            <img src="img/contacto.png" alt="" class="img-responsive">
+            <div class="form-mobile">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="De" ng-model="contacto.nombre" >
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" ng-model="contacto.correo"  >
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Asunto" ng-model="contacto.asunto"  >
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" placeholder="Comentarios" ng-model="contacto.consulta"></textarea>
+                    </div>
+                    <div class="botones">
+                        <a href="https://www.facebook.com/sara.f.fernandez.96" target="_blank" class="btn btn-default facebook pila-derecha hvr-grow-rotate"></a>
+                        <a href="https://www.instagram.com/___sara___f/" target="_blank" class="btn btn-default instagram pila-derecha hvr-grow-rotate"></a>
+                        <button type="button" ng-click="envio()" class="btn btn-default enviar pila-derecha hvr-grow-rotate"></button>
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+
+        <div class="contenido" id="/faqs-content">
+            <img src="img/faqs.png" alt="" class="img-responsive">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="img/faq.png" alt="faq" class="img-responsive">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="contenido" align="center">
+            <a href="#">
+                <img class="img-responsive" src="img/nube-faq.png" alt=""/>
+            </a>
+        </div>
+
+        <img class="img-responsive" src="img/sara-bio.png" alt=""/>
+
+
+    </div>
+
+    <div class="se-pre-con"></div>
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- <script src="bower_components/angular-post-fix/postfix.js"></script> -->
+    <script src="bower_components/ng-dialog/js/ngDialog.min.js"></script>
+    <!--<script src="bower_components/jquery-backstretch/jquery.backstretch.js"></script>-->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
+    <script src="bower_components/lightslider/dist/js/lightslider.js"></script>
+    <script src="bower_components/jquery-zoom/jquery.zoom.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

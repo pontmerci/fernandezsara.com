@@ -328,3 +328,86 @@ width: 100%;
   position: absolute;
   bottom: 20px;
 }
+
+/*#mobile*/
+#mobile{
+    background-color: #aca89f;
+
+    /*background: url(../img/faq-fondo.jpg) no-repeat center center fixed;*/
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    /*background-size: cover;*/
+
+}
+#mobile .enca{
+margin: 20px 0;
+
+}
+#mobile .slide-mobile{
+    margin: 10px 0;
+    background: url(../img/basehome.jpg) no-repeat center bottom;
+    padding: 80px 0 60px 0;
+}
+#mobile #carousel-example-generic{
+    position: relative;
+}
+#mobile .menu1{
+
+}
+#mobile .menu1 #bio {
+    background: url("../img/bio.png") left;
+    background-repeat: no-repeat;
+    border: none;
+    width: 350px;
+    height: 78px;
+}
+#mobile .menu1 #portfolio {
+    background: url("../img/portfolio.png") left;
+    background-repeat: no-repeat;
+    border: none;
+    width: 350px;
+    height: 88px;
+}
+#mobile .menu1 #faqs {
+    background: url("../img/faqs.png") left;
+    background-repeat: no-repeat;
+    border: none;
+    width: 350px;
+    height: 56px;
+}
+#mobile .menu1 #contacto {
+    background: url("../img/contacto.png") left;
+    background-repeat: no-repeat;
+    border: none;
+    width: 350px;
+    height: 68px;
+    margin-top: -30px;
+}
+#mobile .menu1 #shop {
+    background: url("../img/shop.png") left;
+    background-repeat: no-repeat;
+    border: none;
+    width: 350px;
+    height: 68px;
+}
+#mobile .contenido{
+    margin: 20px 0;
+
+}
+#mobile .portfolio{
+    padding: 0 10px;
+
+}
+#mobile .list-group-item{
+    background: none;
+    border: none;
+}
+#mobile .volver{
+    position: fixed;
+    bottom: 40px;
+}
+#mobile .form-mobile{
+    padding:30px 20px;
+
+}

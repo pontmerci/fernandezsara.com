@@ -1,0 +1,57 @@
+@@include('./encabezado.html')
+<body id="mobile">
+    <div class="container-fluid" ng-controller="mobileCtl">
+
+        <div class="enca" align="center" >
+            <div class="row">
+                <div class="col-md-12" >
+                    <img src="img/sara-contacto.png" alt="sarafernandez" class="img-responsive">
+                </div>
+
+            </div>
+        </div>
+        <div class="portfolio">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="portfolio-det-lista" ng-if="ready">
+                        <div ng-if="cat==13" class="item " >
+                            <video class="img-responsive" controls="" autoplay="" name="media">
+                                <source src="img/silencio.mp4" type="video/mp4">
+                                <source src="img/silencio.webm" type="video/webm">
+                            </video>
+                        </div>
+                        <div ng-if="cat==14" class="item " >
+                            <video class="img-responsive" controls="" autoplay="" name="media">
+                                <source src="img/stu.mp4" type="video/mp4">
+                                <source src="img/stu.webm" type="video/webm">
+                            </video>
+                        </div>
+                        <div class="item " ng-repeat=" i in lista">
+                            <img class="img-responsive" src="{{i.link_img1}}" alt="{{i.desc_corta}}">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="volver">
+            <a href="#" onclick="window.history.back()" class="btn btn-default">Volver</a>
+        </div>
+
+    </div>
+
+    <div class="se-pre-con"></div>
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- <script src="bower_components/angular-post-fix/postfix.js"></script> -->
+    <script src="bower_components/ng-dialog/js/ngDialog.min.js"></script>
+    <!--<script src="bower_components/jquery-backstretch/jquery.backstretch.js"></script>-->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
+    <script src="bower_components/lightslider/dist/js/lightslider.js"></script>
+    <script src="bower_components/jquery-zoom/jquery.zoom.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
